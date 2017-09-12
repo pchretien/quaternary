@@ -34,6 +34,7 @@
 #define MAX_PALETTES 10
 #define TOTAL_PALETTES 10
 #define CLOCK_PIXELS 9
+#define VERSION 5
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = pin number (most are valid)
@@ -51,28 +52,28 @@ uint32_t colors[TOTAL_PALETTES][4] =
   {
     {
       // #1 RGB
-      strip.Color(0,0,0),    // off
-      strip.Color(255,10,10),  // hours
-      strip.Color(10,255,10),  // minutes
-      strip.Color(10,10,255) // both;
+      strip.Color(255,255,200),    // off
+      strip.Color(255,0,0),  // hours
+      strip.Color(0,255,0),  // minutes
+      strip.Color(0,0,255) // both;
     }, 
     {
       // #2 Mondrian
-      strip.Color(0,0,0),    // off
-      strip.Color(255,10,10),  // hours
-      strip.Color(248,222,0),  // minutes
-      strip.Color(10,10,255) // both;
+      strip.Color(255,255,200),    // off
+      strip.Color(255,0,0),  // hours
+      strip.Color(248,200,0),  // minutes
+      strip.Color(0,0,255) // both;
     }, 
     {
       // #3 Basbrun
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(80,40,0),  // hours
       strip.Color(20,200,20),  // minutes
       strip.Color(255,100,10) // both;
     },
     {
       // #4 80's
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(245,100,201),  // hours
       strip.Color(114,247,54),  // minutes
       strip.Color(113,235,219) // both;
@@ -80,7 +81,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       // #5 Pastel
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(255,123,123),  // hours
       strip.Color(143,255,112),  // minutes
       strip.Color(120,120,255) // both;
@@ -88,7 +89,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       // #6 Modern
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(212,49,45),  // hours
       strip.Color(145,210,49),  // minutes
       strip.Color(141,95,224) // both;
@@ -96,7 +97,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       // #7 Cold
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(209,62,200),  // hours
       strip.Color(69,232,224),  // minutes
       strip.Color(80,70,202) // both;
@@ -104,7 +105,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       // #8 Warm
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(237,20,20),  // hours
       strip.Color(246,243,54),  // minutes
       strip.Color(255,126,21) // both;
@@ -112,7 +113,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       //#9 Earth
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(70,35,0),  // hours
       strip.Color(70,122,10),  // minutes
       strip.Color(200,182,0) // both;
@@ -120,7 +121,7 @@ uint32_t colors[TOTAL_PALETTES][4] =
     ,
     {
       // #10 Dark
-      strip.Color(0,0,0),    // off
+      strip.Color(255,255,200),    // off
       strip.Color(211,34,34),  // hours
       strip.Color(80,151,78),  // minutes
       strip.Color(16,24,149) // both;
@@ -172,7 +173,7 @@ void setup()
   
   pinMode(13, OUTPUT);
   
-  for(int i=0;i<4;i++)
+  for(int i=0;i<VERSION;i++)
   {
     digitalWrite(13, HIGH);
     delay(250);
