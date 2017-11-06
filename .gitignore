@@ -1,0 +1,14 @@
+*.gcode
+*.stl
+*.skb
+*.bak
+*.nc
+*.dxf
+BB/*
+FC/*
+Thumbs.db
+*.b1
+*.b2
+*.b3
+*.b4
+
