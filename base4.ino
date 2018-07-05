@@ -1,4 +1,4 @@
-// Quaternary Clock
+// Base4 Clock
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License Version 2
@@ -518,7 +518,19 @@ void checkErrors()
   if(time1 == time2)
   {
     error |= 0x02;
-  }  
+  } 
+
+  for(int i=0; i<=error; i++)
+  {
+    digitalWrite(13, HIGH);
+    if(i==0)
+      delay(1000);
+    else
+      delay(250);
+      
+    digitalWrite(13, LOW);
+    delay(250);
+  }
 }
 
 void printDateTime(DateTime now)
